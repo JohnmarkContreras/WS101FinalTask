@@ -7,6 +7,7 @@
 body{
     scroll-behavior: smooth;
     width: 100%;
+    min-height: 100vh;
 }
 nav{
     position: sticky;
@@ -21,6 +22,12 @@ nav{
 .home{
     position: relative;
     height: 100vh;
+}
+.home #home-img{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
 }
 nav .logo img{
     margin: 50px;
@@ -84,9 +91,28 @@ nav .account button{
     display: block;
 }
 
+.announcement{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.announcement-container{
+    line-height: 2;
+    display: block;
+    height: min-content;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    background-color: #A5D7E8;
+
+}
 @media (max-width: 640px) {
 
     nav {
+    position: relative;
     flex-direction: column;
     height: min-content;
     text-align: center;
@@ -100,5 +126,8 @@ nav .account button{
 
     nav li {
     margin: 0.8em 0;
+    }
+    .announcement-container{
+    margin-top: 100%;
     }
 }
