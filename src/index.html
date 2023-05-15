@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <title>LAN INTERNET</title>
+    
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr;
+        }
+        #grid img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="home" id="home">
+        <nav>
+            <div class="logo">
+                <a href="./index.html"><img src="../src/img/Logoonly-removebg-preview.png" alt="LOGO"></a>
+            </div>
+            <ul>
+                <!--Product dropdown-->
+                <li class="dropdown"><a href="">PRODUCT</a>
+                    <ul class="dropdown-content">
+                        <a href="./internetplan.html">Products</a>
+                        <a href="">Upgrades</a>
+                        <a href="">Featured</a>
+                    </ul>
+                </li>
+                <!--Internet plans dropdown-->
+                <li><a href="../src/internetplan.html">INTERNET PLANS</a></li>
+                <li class="dropdown"><a href="">GALLERY</a>
+                    <ul class="dropdown-content">
+                        <a href="">About us</a>
+                        <a href="">Services</a>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <li><a href="">PROMOS</a></li>
+
+                <li class="dropdown"><a href="">ABOUT US</a></li>
+                <!--Contacts dropdown-->
+                <li class="dropdown"><a href="./contact.html">CONTACTS</a>
+                    <ul class="dropdown-content">
+                        <a href="">Tech support</a>
+                        <a href="">Message</a>
+                        <a href="">Social media</a>
+                        <a href="#announcement">Announcement</a>
+                    </ul>
+                </li>
+            </ul>
+            <div class="account">
+                <div class="login">
+                    <button>Login</button>
+                </div>
+
+                <div class="signup">
+                    <button>Sign up</button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="grid" id="grid">
+            <div>
+                <img src="../src/img/product3.jpg" alt="">
+            </div>
+    
+            <div>
+                <img src="../src/img/product2.jpg" alt="">
+            </div>
+    
+            <div>
+                <img src="../src/img/product1.jpg" alt="">
+            </div>
+    
+            <div>
+                <img src="../src/img/product4.jpg" alt="">
+            </div>
+        </section>
+    <button class="absolute z-10 text-white bg-blue-900 p-3 rounded-3xl top-3/4 left-28"><a href="./forms.html">Apply now</a></button>
+    </div>
+
+
+    <div class="announcement">
+        <div class="announcement-container" id="announcement">
+            <h4>ANNOUNCEMENT</h4>
+            <P>We wish to inform you of that there will be an update to our servers.
+                <br>
+                There will be some internet interruptions on some are, so please bear with us.
+                <br>
+                The upgrade will be for the upgrade of our router for a better service.
+                <br>
+                Thank you.</P>
+        </div>
+    </div>
+
+    <div class="flex bg-red-950 h-96 text-white">
+        <div>
+            <h1>Test</h1>
+        </div>
+
+        <div>
+            <h1>Test</h1>
+        </div>
+
+        <div>
+            <h1>Test</h1>
+        </div>
+
+        <div>
+            <h1>Test</h1>
+        </div>
+    </div>
+</body>
+</html>
