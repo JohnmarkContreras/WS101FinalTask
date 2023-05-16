@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/node_modules/@flaticon/flaticon-uicons/css/brands/all.css">
+	<link rel="stylesheet" href="/node_modules/@flaticon/flaticon-uicons/css/bold/all.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/dist/output.css">
     <title>Contacts</title>
+	<style>
+		@media(max-width:640px){
+			.social-media{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	</style>
 </head>
 <body class="min-h-screen">
     <nav class="relative px-4 py-4 flex justify-between items-center bg-blue-950">
@@ -55,6 +66,61 @@
 		<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
 	</nav>
     <!--code here-->
+	<section class="text-center h-52 items-center mt-10">
+		<h1 class="text-5xl font-semibold text-blue-950">We would love to hear from you</h1>
+		<p class="font-normal p-10">Send your inquiries--we're ready to answer all your questions.</p>
+	</section>
+	<section class="grid lg:grid-cols-4 lg:grid-rows-1 sm:grid-rows-4 sm:grid-cols-1 p-5">
+		<div class="p-5 m-5 border-2 border-blue-100">
+			<div class="font-bold text-blue-950">
+				<h1 class="text-2xl">Services</h1>
+			</div>
+			
+			<p class="font-normal pt-5 pb-5 leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				Ullam at aliquam tempore ipsum repellat possimus optio, magnam harum, eaque, voluptatem error. 
+				Harum consectetur tempora nihil animi rerum minima, beatae repudiandae!</p>
+			<button class="bg-blue-600 p-2 rounded-lg text-white"><a href="./internetplan.html">Get in touch</a></button>
+		</div>
+		<div class="p-5 m-5 border-2 border-blue-100">
+			<div class="font-bold text-blue-950">
+				<h1 class="text-2xl">Support</h1>
+			</div>
+			<p class="font-normal pt-5 pb-5 leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				Ullam at aliquam tempore ipsum repellat possimus optio, magnam harum, eaque, voluptatem error. 
+				Harum consectetur tempora nihil animi rerum minima, beatae repudiandae!</p>
+			<button class="bg-blue-600 p-2 rounded-lg text-white">Get in touch</button>
+		</div>
+		<div class="p-5 m-5 border-2 border-blue-100">
+			<div class="font-bold text-blue-950">
+				<h1 class="text-2xl">Sales</h1>
+			</div>
+			<p class="font-normal pt-5 pb-5 leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				Ullam at aliquam tempore ipsum repellat possimus optio, magnam harum, eaque, voluptatem error. 
+				Harum consectetur tempora nihil animi rerum minima, beatae repudiandae!</p>
+			<button class="bg-blue-600 p-2 rounded-lg text-white">Get in touch</button>
+		</div>
+		<div class="font-normal p-5 m-5 border-2 border-blue-100">
+			<div class="font-bold text-blue-950">
+				<h1 class="text-2xl">Feedback</h1>
+			</div>
+			<p class="pt-5 pb-5 leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				Ullam at aliquam tempore ipsum repellat possimus optio, magnam harum, eaque, voluptatem error. 
+				Harum consectetur tempora nihil animi rerum minima, beatae repudiandae!</p>
+			<button class="bg-blue-600 p-2 rounded-lg text-white">Get in touch</button>
+		</div>
+	</section>
+	<footer class="lg:flex lg:justify-around lg:items-center h-20 border-t-2 border-blue-200 sm:block sm:m-auto">
+		<p class="my-4 text-xs text-center text-gray-400">
+			<span class="text-black">Copyright © 2023 Lan Wired Internet. All rights reserved</span>
+		</p>
+		<section class="social-media flex lg:justify-end sm:justify-center md:justify-center">
+			<a target="_blank" href="https://www.facebook.com/profile.php?id=100091641409850&mibextid=LQQJ4d"><img class="m-2 w-7 object-contain" src="./img/social-media-icons/facebook.png" alt="Facebook"></a>
+			<img class="m-2 w-7 object-contain" src="./img/social-media-icons/gmail.png" alt="">
+			<img class="m-2 w-7 object-contain" src="./img/social-media-icons/instagram.png" alt="">
+			<img class="m-2 w-7 object-contain" src="./img/social-media-icons/telephone.png" alt="">
+			<img class="m-2 w-7 object-contain" src="./img/social-media-icons/linkedin.png" alt="">
+		</section>
+	</footer>
     <div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
@@ -62,8 +128,11 @@
 				<a class="mr-auto text-3xl font-bold leading-none" href="#">
 					<img class="w-20" src="./img/Logoonly-removebg-preview.png" alt="">
 				</a>
+				<div class="company-name text-black text-bold">
+					<h1>Lan Wired Internet</h1>
+				</div>
 				<button class="navbar-close">
-					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500 ml-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 					</svg>
 				</button>
