@@ -59,13 +59,26 @@
   right: 0;
 
 }
+@media(max-width:640px){
+    .carousel-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .carousel-button-prev {
+        display: none;
+    }
+    .carousel-button-next {
+        display: none;
+    }
+
+}
   </style>
 </head>
 <body>
     <body class="min-h-screen">
         <nav class="relative px-4 py-4 flex justify-between items-center bg-blue-950">
             <a class="text-3xl font-bold leading-none" href="./index.html">
-                <img class="w-20" src="./img/Logoonly-removebg-preview.png" alt="">
+                <img class="w-20 border-red-100" src="./img/Logoonly-removebg-preview.png" alt="">
             </a>
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -106,7 +119,7 @@
             <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
         </nav>
 
-    <div class="carousel lg:grid-cols-4 grid-rows-1 sm:grid-cols-1">
+    <div class="carousel lg:grid-cols-4 grid-rows-1 sm:grid-cols-1 sm:grid-rows-6">
         <div class="carousel-container lg:flex sm:block">
           <div class="carousel-item p-5">
             <img src="./img/product3.jpg" alt="Image 1">
