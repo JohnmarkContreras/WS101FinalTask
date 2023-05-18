@@ -65,7 +65,7 @@
 		<h1 class="text-5xl font-semibold text-blue-950">We would love to hear from you</h1>
 		<p class="font-normal p-10">Send your inquiries--we're ready to answer all your questions.</p>
 	</section>
-	<section class="grid lg:grid-cols-4 lg:grid-rows-1 sm:grid-rows-4 sm:grid-cols-1 p-5">
+	<section class="grid lg:grid-cols-4 lg:grid-rows-1 sm:grid-rows-4 sm:grid-cols-1 p-5 reveal">
 		<div class="p-5 m-5 border-2 border-blue-100">
 			<div class="font-bold text-blue-950">
 				<h1 class="text-2xl">Services</h1>
@@ -160,47 +160,6 @@
 			</div>
 		</nav>
         
-        <script>
-            // Burger menus
-            document.addEventListener('DOMContentLoaded', function() {
-                // open
-                const burger = document.querySelectorAll('.navbar-burger');
-                const menu = document.querySelectorAll('.navbar-menu');
-            
-                if (burger.length && menu.length) {
-                    for (var i = 0; i < burger.length; i++) {
-                        burger[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            
-                // close
-                const close = document.querySelectorAll('.navbar-close');
-                const backdrop = document.querySelectorAll('.navbar-backdrop');
-            
-                if (close.length) {
-                    for (var i = 0; i < close.length; i++) {
-                        close[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            
-                if (backdrop.length) {
-                    for (var i = 0; i < backdrop.length; i++) {
-                        backdrop[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            });
-            </script>
+    <script src="./script/script.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta property="og:image" href="./img/Logoonly-removebg-preview.png">
   <meta property="og:description" content="Description of your page">
   <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.simplilearn.com%2Fwhat-is-internet-article&psig=AOvVaw0lTWGyklI95G7dPTr9HgmZ&ust=1684398078434000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjGyfr1-_4CFQAAAAAdAAAAABAE">
-  <meta property="og:url" content="https://johnmarkcontreras.github.io/WS101FinalTask/src/index.html">
+  <meta property="og:url" content="https://johnmarkcontreras.github.io/WS101FinalTask/src./index.html">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,14 +20,14 @@
     <title>LAN WIRED INTERNET</title>
   <style>
 
-        .carousel-container img{
-            object-fit: cover;
-            border-radius: 20px;
-        }
-        .carousel-container img:hover{
-			transform: scale(1.05);
-			transition: 1s;
-		}
+.carousel-container img{
+    object-fit: cover;
+    border-radius: 20px;
+}
+.carousel-container img:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
         
     .carousel {
   position: relative;
@@ -138,7 +138,7 @@
         </nav>
 
     <div class="carousel relative lg:grid-cols-4 grid-rows-1 sm:grid-cols-1 sm:grid-rows-6">
-        <div class="carousel-container lg:flex sm:block">
+        <div class="carousel-container lg:flex sm:block reveal">
           <div class="carousel-item p-5">
             <img src="./img/product3.jpg" alt="Image 1">
             <div class="flex justify-center button pt-5">
@@ -193,9 +193,9 @@
         <button class="lg:block sm:hidden carousel-button carousel-button-next bg-blue-400">&#8250;</button>
       </div>
 
-      <section class="product" id="product">
-        <div class="text-center">
-          <h1 class="lg:text-5xl overline font-semi">Additional Products</h1>
+      <section class="product reveal" id="product">
+        <div class="text-center bg-sky-700">
+          <h1 class="lg:text-5xl md:text-3xl sm:text-xl font-semi mt-0 text-white p-5">Additional Products</h1>
         </div>
         <div class="grid lg:grid-rows-1 lg:grid-cols-5 sm:grid-rows-5 sm:grid-cols-1">
           <div class="p-5">
@@ -291,86 +291,44 @@
 		</nav>
 
       <script>
-        //navbar script
-          // Burger menus
-          document.addEventListener('DOMContentLoaded', function() {
-                // open
-                const burger = document.querySelectorAll('.navbar-burger');
-                const menu = document.querySelectorAll('.navbar-menu');
-            
-                if (burger.length && menu.length) {
-                    for (var i = 0; i < burger.length; i++) {
-                        burger[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            
-                // close
-                const close = document.querySelectorAll('.navbar-close');
-                const backdrop = document.querySelectorAll('.navbar-backdrop');
-            
-                if (close.length) {
-                    for (var i = 0; i < close.length; i++) {
-                        close[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            
-                if (backdrop.length) {
-                    for (var i = 0; i < backdrop.length; i++) {
-                        backdrop[i].addEventListener('click', function() {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
-                    }
-                }
-            });
+  /*On load animation*/
+  function reveal() {
+	var reveals = document.querySelectorAll(".reveal");
 
-        // Get the necessary elements
-const carouselContainer = document.querySelector('.carousel-container');
-const prevButton = document.querySelector('.carousel-button-prev');
-const nextButton = document.querySelector('.carousel-button-next');
+	for (var i = 0; i < reveals.length; i++) {
+		var windowHeight = window.innerHeight;
+		var elementTop = reveals[i].getBoundingClientRect().top;
+		var elementVisible = 100;
 
-// Calculate the width of a single item
-const carouselItemWidth = carouselContainer.querySelector('.carousel-item').offsetWidth;
+		if (elementTop < windowHeight - elementVisible) {
+		reveals[i].classList.add("active");
+		} else {
+		reveals[i].classList.remove("active");
+		}
+	}
+	}
 
-// Set the initial position of the carousel
-let currentPosition = 0;
+	window.addEventListener("load", reveal);
 
-// Function to move the carousel to the specified position
-const moveCarousel = (position) => {
-  carouselContainer.style.transform = `translateX(${position}px)`;
-};
+  /*On scroll animation*/
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
 
-// Function to handle the previous button click
-const prevButtonClick = () => {
-  currentPosition += carouselItemWidth;
-  if (currentPosition > 0) {
-    currentPosition = -(carouselItemWidth * (carouselContainer.childElementCount - 3));
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
   }
-  moveCarousel(currentPosition);
-};
+}
 
-// Function to handle the next button click
-const nextButtonClick = () => {
-  currentPosition -= carouselItemWidth;
-  if (currentPosition < -(carouselItemWidth * (carouselContainer.childElementCount - 3))) {
-    currentPosition = 0;
-  }
-  moveCarousel(currentPosition);
-};
-
-
-// Add event listeners to the buttons
-prevButton.addEventListener('click', prevButtonClick);
-nextButton.addEventListener('click', nextButtonClick);
+window.addEventListener("scroll", reveal);
       </script>
+      <script src="./script/script.js"></script>
 </body>
 </html>
